@@ -16,15 +16,19 @@ Because this is built in VirtualBox the compute nodes are setup to use [qemu](ht
 
 For the brave, this will fire up all the servers and do everything.  This process "takes a while" an produces a lot of valuable troubleshooting output, so capture it with _tee_.  
 
+	./generate-passwords.sh  
 	vagrant up | tee vagrant.log  
+	git reset --hard HEAD   # hack to reset files that were changed by generate-passwords.sh  
 
 ### One at a time please  
 
 The first time you fire up your OpenStack it would be a good idea to do them one at a time and save the output.  
 
-        vagrant up controller | tee controller.log  
-        vagrant up compute1 | tee compute1.log  
-        vagrant up compute2 | tee compute2.log  
+	./generate-passwords.sh  
+	vagrant up controller | tee controller.log  
+	vagrant up compute1 | tee compute1.log  
+	vagrant up compute2 | tee compute2.log  
+	git reset --hard HEAD   # hack to reset files that were changed by generate-passwords.sh  
 
 *When compute2 is brought up, the glusterfs volumes will be setup and available/replicated on all three servers.*  
 
