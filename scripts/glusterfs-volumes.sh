@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo #########################################################################
 echo [+] Setting up glance-images, nova-instances and cinder-volumes 

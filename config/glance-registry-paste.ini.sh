@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 cp /etc/glance/glance-registry-paste.ini /etc/glance/glance-registry-paste.ini.bak
 

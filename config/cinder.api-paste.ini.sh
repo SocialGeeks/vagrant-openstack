@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 cp /etc/cinder/api-paste.ini /etc/cinder/api-paste.ini.bak
 

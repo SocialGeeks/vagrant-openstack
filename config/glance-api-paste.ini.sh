@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 cp /etc/glance/glance-api-paste.ini /etc/glance/glance-api-paste.ini.bak
 

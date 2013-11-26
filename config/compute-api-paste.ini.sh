@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 cp /etc/nova/api-paste.ini /etc/nova/api-paste.ini.bak
 

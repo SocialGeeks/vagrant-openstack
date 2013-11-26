@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 cp /etc/ntp.conf /etc/ntp.conf.bak
 

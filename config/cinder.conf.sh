@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 cp /etc/cinder/cinder.conf /etc/cinder/cinder.conf.bak
 

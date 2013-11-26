@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 cp /etc/nova/nova-compute.conf /etc/nova/nova-compute.conf.bak
 

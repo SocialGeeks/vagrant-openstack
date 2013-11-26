@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 cp /etc/glance/glance-api.conf /etc/glance/glance-api.conf.bak
 

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 cp /etc/network/interfaces /etc/network/interfaces.bak
 

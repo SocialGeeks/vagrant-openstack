@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo 
 echo [+] Adding compute node and dependencies for qemu

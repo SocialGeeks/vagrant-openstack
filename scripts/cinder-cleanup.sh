@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo #########################################################################
 echo [+] Finishing cinder setup and cleaning up

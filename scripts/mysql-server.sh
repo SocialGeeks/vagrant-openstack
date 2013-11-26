@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo 
 echo [+] Setting up MySQL server and python libraries

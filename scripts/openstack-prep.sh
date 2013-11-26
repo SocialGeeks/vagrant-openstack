@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo 
 echo [+] Preparing for OpenStack by updating ports and distribution and
