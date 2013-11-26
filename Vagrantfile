@@ -7,6 +7,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu-13.10-amd64"
   config.vm.synced_folder ".", "/vagrant", disabled: true
+  config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
 
   # Setup Openstack Controller
   config.vm.define "controller" do |controller|
