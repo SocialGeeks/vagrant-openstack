@@ -9,13 +9,15 @@ apt-get install -y glance
 apt-get install -y sheepdog
 sleep 3
 
+source /root/passwordsrc
+
 rm /var/lib/glance/glance.sqlite
 
 cat <<EOF > /root/glance.sql
 CREATE DATABASE glance;
-GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'localhost' IDENTIFIED BY 'useabetterpasswordhere';
-GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'%' IDENTIFIED BY 'useabetterpasswordhere';
-GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'controller' IDENTIFIED BY 'useabetterpasswordhere';
+GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'localhost' IDENTIFIED BY '$MYSQL_GLANCE';
+GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'%' IDENTIFIED BY '$MYSQL_GLANCE';
+GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'controller' IDENTIFIED BY '$MYSQL_GLANCE';
 EOF
 
 mysql -u root < /root/glance.sql

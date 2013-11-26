@@ -5,6 +5,8 @@ echo [+] Adding compute controller services
 echo 
 sleep 2
 
+source /root/passwordsrc
+
 apt-get install -y nova-novncproxy 
 apt-get install -y novnc 
 apt-get install -y nova-api
@@ -19,9 +21,9 @@ rm /var/lib/nova/nova.sqlite
 
 cat <<EOF > /root/nova.sql
 CREATE DATABASE nova;
-GRANT ALL PRIVILEGES ON nova.* TO 'nova'@'localhost' IDENTIFIED BY 'useabetterpasswordhere';
-GRANT ALL PRIVILEGES ON nova.* TO 'nova'@'%' IDENTIFIED BY 'useabetterpasswordhere';
-GRANT ALL PRIVILEGES ON nova.* TO 'nova'@'controller' IDENTIFIED BY 'useabetterpasswordhere';
+GRANT ALL PRIVILEGES ON nova.* TO 'nova'@'localhost' IDENTIFIED BY '$MYSQL_NOVA';
+GRANT ALL PRIVILEGES ON nova.* TO 'nova'@'%' IDENTIFIED BY '$MYSQL_NOVA';
+GRANT ALL PRIVILEGES ON nova.* TO 'nova'@'controller' IDENTIFIED BY '$MYSQL_NOVA';
 EOF
 
 mysql -u root < /root/nova.sql

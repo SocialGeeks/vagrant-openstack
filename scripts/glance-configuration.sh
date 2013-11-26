@@ -6,11 +6,12 @@ echo
 sleep 2
 
 source /root/keystonerc
+source /root/passwordsrc
 
 glance-manage db_sync
 sleep 2
 
-keystone user-create --name=glance --pass=useabetterpasswordhere --email=glance@example.com
+keystone user-create --name=glance --pass=$KEYSTONE_GLANCE --email=glance@example.com
 keystone user-role-add --user=glance --tenant=service --role=admin
 
 keystone service-create --name=glance --type=image --description="Glance Image Service" | tee /root/glance-service

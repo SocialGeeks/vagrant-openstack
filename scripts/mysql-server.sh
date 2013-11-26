@@ -16,5 +16,4 @@ service mysql restart
 sleep 2
 
 # mysql_secure_installation
-# echo ; echo y; echo useabetterpasswordhere; echo useabetterpasswordhere; echo y; echo y; echo y; echo y;
 

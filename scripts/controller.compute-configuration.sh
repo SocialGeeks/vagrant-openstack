@@ -9,8 +9,9 @@ nova-manage db sync
 sleep 5
 
 source /root/keystonerc
+source /root/passwordsrc
 
-keystone user-create --name=nova --pass=useabetterpasswordhere --email=nova@example.com
+keystone user-create --name=nova --pass=$KEYSTONE_NOVA --email=nova@example.com
 keystone user-role-add --user=nova --tenant=service --role=admin
 
 keystone service-create --name=nova --type=compute --description="Nova Compute service" | tee /root/nova-service

@@ -6,5 +6,8 @@ echo
 sleep 2
 
 apt-get install -y rabbitmq-server
-rabbitmqctl change_password guest useabetterpasswordhere
+
+source /root/passwordsrc
+
+rabbitmqctl change_password guest $RABBITMQ_GUEST
 
