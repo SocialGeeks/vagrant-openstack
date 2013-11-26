@@ -124,7 +124,7 @@ auth_port = 35357
 auth_protocol = http
 admin_tenant_name = service
 admin_user = nova
-admin_password = useabetterpasswordhere
+admin_password = KEYSTONE_NOVA_PASSWORD 
 # signing_dir is configurable, but the default behavior of the authtoken
 # middleware should be sufficient.  It will create a temporary directory
 # in the home directory for the user the nova process is running as.

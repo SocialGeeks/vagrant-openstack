@@ -143,7 +143,7 @@ log_dir = /var/log/keystone
 
 [sql]
 # The SQLAlchemy connection string used to connect to the database
-connection = mysql://keystone:useabetterpasswordhere@localhost/keystone
+connection = mysql://keystone:MYSQL_KEYSTONE_PASSWORD@localhost/keystone
 
 # the timeout before idle sql connections are reaped
 # idle_timeout = 200

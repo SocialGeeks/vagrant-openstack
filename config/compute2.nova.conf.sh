@@ -22,7 +22,7 @@ enabled_apis=ec2,osapi_compute,metadata
 auth_strategy=keystone
 rpc_backend = nova.rpc.impl_kombu
 rabbit_host = controller
-rabbit_password = useabetterpasswordhere
+rabbit_password = RABBITMQ_GUEST_PASSWORD 
 my_ip=192.168.56.12
 vnc_enabled=True
 vncserver_listen=0.0.0.0
@@ -44,6 +44,6 @@ rabbit_host=controller
 
 [database]
 # The SQLAlchemy connection string used to connect to the database
-connection = mysql://nova:useabetterpasswordhere@controller/nova
+connection = mysql://nova:MYSQL_NOVA_PASSWORD@controller/nova
 EOF
 

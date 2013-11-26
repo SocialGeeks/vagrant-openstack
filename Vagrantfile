@@ -31,7 +31,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     controller.vm.provision "shell", path: "config/hosts.sh"
     controller.vm.provision "shell", path: "scripts/networking.sh"
     controller.vm.provision "shell", path: "scripts/openstack-prep.sh"
-    controller.vm.provision "shell", path: "scripts/passwords.sh"
+    controller.vm.provision "shell", path: "config/passwords.sh"
     controller.vm.provision "shell", path: "scripts/glusterfs-prep.sh"
     controller.vm.provision "shell", path: "scripts/mysql-server.sh"
     controller.vm.provision "shell", path: "scripts/rabbitmq.sh"

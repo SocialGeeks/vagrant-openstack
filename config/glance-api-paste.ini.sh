@@ -74,7 +74,7 @@ paste.filter_factory = keystoneclient.middleware.auth_token:filter_factory
 auth_host = controller
 admin_user = glance
 admin_tenant_name = service
-admin_password = useabetterpassswordhere
+admin_password = KEYSTONE_GLANCE_PASSWORD 
 
 [filter:gzip]
 paste.filter_factory = glance.api.middleware.gzip:GzipMiddleware.factory

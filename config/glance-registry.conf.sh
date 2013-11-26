@@ -34,7 +34,7 @@ backlog = 4096
 # SQLAlchemy connection string for the reference implementation
 # registry server. Any valid SQLAlchemy connection string is fine.
 # See: http://www.sqlalchemy.org/docs/05/reference/sqlalchemy/connections.html#sqlalchemy.create_engine
-sql_connection = mysql://glance:useabetterpasswordhere@localhost/glance
+sql_connection = mysql://glance:MYSQL_GLANCE_PASSWORD@localhost/glance
 
 # Period in seconds after which SQLAlchemy should reestablish its connection
 # to the database.
@@ -91,7 +91,7 @@ auth_port = 35357
 auth_protocol = http
 admin_tenant_name = service
 admin_user = glance
-admin_password = useabetterpasswordhere
+admin_password = KEYSTONE_GLANCE_PASSWORD 
 
 [paste_deploy]
 # Name of the paste configuration file that defines the available pipelines

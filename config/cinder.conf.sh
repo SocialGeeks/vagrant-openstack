@@ -18,12 +18,12 @@ rpc_backend = cinder.openstack.common.rpc.impl_kombu
 rabbit_host = controller
 rabbit_port = 5672
 rabbit_userid = guest
-rabbit_password = useabetterpasswordhere 
+rabbit_password = RABBITMQ_GUEST_PASSWORD 
 glance_host = controller
 
 [database]
 # The SQLAlchemy connection string used to connect to the
 # database (string value)
-connection = mysql://cinder:useabetterpasswordhere@controller/cinder
+connection = mysql://cinder:MYSQL_CINDER_PASSWORD@controller/cinder
 EOF
 

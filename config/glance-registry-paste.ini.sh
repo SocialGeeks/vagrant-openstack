@@ -31,6 +31,6 @@ paste.filter_factory = keystoneclient.middleware.auth_token:filter_factory
 auth_host = controller
 admin_user = glance
 admin_tenant_name = service
-admin_password = useabetterpasswordhere 
+admin_password = KEYSTONE_GLANCE_PASSWORD 
 EOF
 
