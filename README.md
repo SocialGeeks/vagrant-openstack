@@ -10,15 +10,13 @@ Because this is built in VirtualBox the compute nodes are setup to use [qemu](ht
 * [VirtualBox](https://www.virtualbox.org/) w/ a host only network named vboxnet0  
 * [Ubuntu 13.10 amd64 vagrant base box](docs/packer.md)  
 
-## Start OpenStack servers using vagrant   
+## Build OpenStack using vagrant   
 
 ### Quick start  
 
 For the brave, this will fire up all the servers and do everything.  This process "takes a while" an produces a lot of valuable troubleshooting output, so capture it with _tee_.  
 
 	vagrant up | tee vagrant.log  
-
-After the 3 servers are running and provisioned you can do the [post-configuration and testing](docs/post-configuration.md).  
 
 ### One at a time please  
 
@@ -30,24 +28,9 @@ The first time you fire up your OpenStack it would be a good idea to do them one
 
 *When compute2 is brought up, the glusterfs volumes will be setup and available/replicated on all three servers.*  
 
-After the 3 servers are running and provisioned you can do the [post-configuration and testing](docs/post-configuration.md).  
+### Post-configuration and testing  
 
-## VirtualBox OpenStack Servers  
-
-### controller  
-
-The controller is running the following OpenStack services.  
-
-* keystone packages   
-* glance packages   
-* nova compute controller packages  
-
-### compute1 and compute2  
-
-The compute nodes are running the following OpenStack services.  
-
-* nova compute packages  
-* nova network packages   
+After the [3 servers](docs/servers.md) are running and provisioned you can do the [post-configuration and testing](docs/post-configuration.md) of your OpenStack to verify everything was installed correctly.  
 
 ## Copyright  
 
