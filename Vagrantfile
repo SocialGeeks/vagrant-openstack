@@ -49,6 +49,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     controller.vm.provision "shell", path: "config/compute-api-paste.ini.sh"
     controller.vm.provision "shell", path: "scripts/controller.compute-configuration.sh"
     controller.vm.provision "shell", path: "scripts/controller.nova-network.sh"
+    controller.vm.provision "shell", path: "scripts/horizon-prep.sh"
   end
 
   # Setup OpenStack Compute Node 1
