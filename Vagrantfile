@@ -50,6 +50,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     controller.vm.provision "shell", path: "scripts/controller.compute-configuration.sh"
     controller.vm.provision "shell", path: "scripts/controller.nova-network.sh"
     controller.vm.provision "shell", path: "scripts/horizon-prep.sh"
+    controller.vm.provision "shell", path: "scripts/controller.cinder-prep.sh"
+    controller.vm.provision "shell", path: "config/cinder.api-paste.ini.sh"
+    controller.vm.provision "shell", path: "config/cinder.conf.sh"
+    controller.vm.provision "shell", path: "scripts/controller.cinder-configuration.sh"
   end
 
   # Setup OpenStack Compute Node 1
