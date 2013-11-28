@@ -14,6 +14,7 @@ cat <<EOF > /root/cinder.sql
 CREATE DATABASE cinder;
 GRANT ALL PRIVILEGES ON cinder.* TO 'cinder'@'localhost' IDENTIFIED BY '$MYSQL_CINDER';
 GRANT ALL PRIVILEGES ON cinder.* TO 'cinder'@'%' IDENTIFIED BY '$MYSQL_CINDER';
+GRANT ALL PRIVILEGES ON cinder.* TO 'cinder'controller'%' IDENTIFIED BY '$MYSQL_CINDER';
 EOF
 
 mysql -u root < /root/cinder.sql

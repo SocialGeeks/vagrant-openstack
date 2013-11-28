@@ -20,7 +20,9 @@ source /root/passwordsrc
 
 cat <<EOF > /root/dash.sql
 CREATE DATABASE dash;
+GRANT ALL ON dash.* TO 'dash'@'localhost' IDENTIFIED BY '$MYSQL_DASH';
 GRANT ALL ON dash.* TO 'dash'@'%' IDENTIFIED BY '$MYSQL_DASH';
+GRANT ALL ON dash.* TO 'dash'@'controller' IDENTIFIED BY '$MYSQL_DASH';
 EOF
 
 mysql -u root < /root/dash.sql
