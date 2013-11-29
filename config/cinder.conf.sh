@@ -20,7 +20,7 @@ rabbit_port = 5672
 rabbit_userid = guest
 rabbit_password = RABBITMQ_GUEST_PASSWORD 
 glance_host = controller
-volume_drivero = cinder.volume.drivers.glusterfs.GlusterfsDriver
+volume_driver = cinder.volume.drivers.glusterfs.GlusterfsDriver
 glusterfs_shares_config = /etc/cinder.shares.conf
 glusterfs_mount_point_base = /var/lib/cinder/volumes
 
