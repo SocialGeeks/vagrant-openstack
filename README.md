@@ -10,9 +10,7 @@ Because this is built in VirtualBox the compute nodes are setup to use [qemu](ht
 * [VirtualBox](https://www.virtualbox.org/) w/ a host only network named vboxnet0  
 * [Ubuntu 13.10 amd64 vagrant base box](docs/packer.md)  
 
-## Build OpenStack using vagrant   
-
-### Quick start  
+## Quick start  
 
 For the brave, this will fire up all the servers and do everything.  This process "takes a while" an produces a lot of valuable troubleshooting output, so capture it with _tee_.  
 
@@ -20,7 +18,7 @@ For the brave, this will fire up all the servers and do everything.  This proces
 	vagrant up | tee vagrant.log  
 	git reset --hard HEAD   # hack to reset files that were changed by generate-passwords.sh  
 
-### One at a time please  
+## One at a time please  
 
 The first time you fire up your OpenStack it would be a good idea to do them one at a time and save the output.  
 
@@ -32,7 +30,7 @@ The first time you fire up your OpenStack it would be a good idea to do them one
 
 *When compute2 is brought up, the glusterfs volumes will be setup and available/replicated on all three servers.*  
 
-### Post-configuration and testing  
+## Post-configuration and testing  
 
 After the [3 servers](docs/servers.md) are running and provisioned you can do the [post-configuration and testing](docs/post-configuration.md) of your OpenStack to verify everything was installed correctly.  
 
