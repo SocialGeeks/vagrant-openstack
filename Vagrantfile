@@ -89,6 +89,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     compute1.vm.provision "shell", path: "config/compute-api-paste.ini.sh"
     compute1.vm.provision "shell", path: "scripts/compute-configuration.sh"
     compute1.vm.provision "shell", path: "scripts/compute.nova-network.sh"
+    compute1.vm.provision "shell", path: "scripts/compute.cinder-prep.sh"
+    compute1.vm.provision "shell", path: "config/cinder.api-paste.ini.sh"
+    compute1.vm.provision "shell", path: "config/cinder.conf.sh"
+    compute1.vm.provision "shell", path: "config/cinder.shares.conf.sh"
+    compute1.vm.provision "shell", path: "scripts/compute.cinder-configuration.sh"
   end
 
   # Setup OpenStack Compute Node 2
@@ -125,5 +130,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     compute2.vm.provision "shell", path: "config/compute-api-paste.ini.sh"
     compute2.vm.provision "shell", path: "scripts/compute-configuration.sh"
     compute2.vm.provision "shell", path: "scripts/compute.nova-network.sh"
+    compute2.vm.provision "shell", path: "scripts/compute.cinder-prep.sh"
+    compute2.vm.provision "shell", path: "config/cinder.api-paste.ini.sh"
+    compute2.vm.provision "shell", path: "config/cinder.conf.sh"
+    compute2.vm.provision "shell", path: "config/cinder.shares.conf.sh"
+    compute2.vm.provision "shell", path: "scripts/compute.cinder-configuration.sh"
   end
 end
